@@ -25,8 +25,6 @@ formula = "\\sum_{i = 0}^{i = n} \\frac{i}{2}"
 
 converter = Text2png::Convert(formula)
 
-converter.png #=> "/path/to/file.png"
-
 converter.png {|file| ...do something with 'file'...}
 
 converter.data #=> "data:image/png;base64, iVBOR...."
