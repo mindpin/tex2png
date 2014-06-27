@@ -6,6 +6,6 @@ module Tex2png
     let(:converter) {Converter.new(formula)}
 
     it {expect(converter.png {|io| io}).to be_an IO}
-    it {expect(converter.data).to be_a String}
+    it {expect(converter.data).to include "iVBOR"}
   end
 end

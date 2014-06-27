@@ -1,4 +1,5 @@
 require "securerandom"
+require "base64"
 
 module Tex2png
   class Converter
@@ -26,7 +27,9 @@ module Tex2png
     end
 
     def data
-      png {|io| "data:image/png;base64, #{io.read}"}
+      @data ||= png do |io|
+        "data:image/png;base64, #{Base64.encode64(io.read)}"
+      end
     end
 
     def png(&block)
