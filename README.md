@@ -19,15 +19,17 @@ Or install it yourself as:
 ## Usage
 
 ```ruby
-require "tex2png"
+require "text2png"
 
 formula = "\\sum_{i = 0}^{i = n} \\frac{i}{2}"
 
-converter = Tex2png::Convert(formula)
+converter = Text2png::Convert(formula)
 
 converter.png {|file| ...do something with 'file'...}
 
 converter.data #=> "data:image/png;base64, iVBOR...."
+
+converter.png.path #=> "/tmp/tex2png/..."
 ```
 
 ## Contributing
