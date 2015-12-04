@@ -23,7 +23,7 @@ require "tex2png"
 
 formula = "\\sum_{i = 0}^{i = n} \\frac{i}{2}"
 
-converter = Tex2png::Convert(formula)
+converter = Tex2png::Converter.new(formula)
 
 converter.png {|file| ...do something with 'file'...}
 
