@@ -4,6 +4,8 @@
 require 'tex2png'
 require 'optparse'
 
+Version = Tex2png::VERSION
+
 if __FILE__ == $0
   begin
     opts = OptionParser.new do |opt|
