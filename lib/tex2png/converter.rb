@@ -1,5 +1,6 @@
 require "securerandom"
 require "base64"
+require "fileutils"
 
 module Tex2png
   class Converter
